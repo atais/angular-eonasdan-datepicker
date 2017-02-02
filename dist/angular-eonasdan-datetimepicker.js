@@ -25,12 +25,14 @@
                     }, true);
 
                     ngModel.$render = function () {
-                        if (!ngModel.$viewValue) {
-                            ngModel.$setViewValue(null);
-                        } else if (!moment.isMoment(ngModel.$viewValue)) {
+                        if (ngModel.$viewValue !== undefined && !moment.isMoment(ngModel.$viewValue)) {
                             ngModel.$setViewValue(moment(ngModel.$viewValue));
                         }
-                        dpElement.data('DateTimePicker').date(ngModel.$viewValue);
+                        if (moment.isMoment(ngModel.$viewValue)) {
+                            dpElement.data('DateTimePicker').date(ngModel.$viewValue);
+                        } else {
+                            dpElement.data('DateTimePicker').clear();
+                        }
                     };
 
                     var isDateEqual = function (d1, d2) {
