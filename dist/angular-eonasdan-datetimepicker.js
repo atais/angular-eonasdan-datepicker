@@ -12,7 +12,11 @@
                 scope: {
                     options: '=?',
                     onChange: '&?',
-                    onClick: '&?'
+                    onClick: '&?',
+                    onHide: '&?',
+                    onShow: '&?',
+                    onError: '&?',
+                    onUpdate: '&?'
                 },
                 link: function ($scope, $element, $attrs, ngModel) {
                     var dpElement = $element.parent().hasClass('input-group') ? $element.parent() : $element;
@@ -46,15 +50,46 @@
                         if (!isDateEqual(e.date, ngModel.$viewValue)) {
                             var newValue = e.date === false ? null : e.date;
                             ngModel.$setViewValue(newValue);
-
                             $timeout(function () {
                                 if (typeof $scope.onChange === 'function') {
-                                    $scope.onChange();
+                                      $scope.onChange();
                                 }
                             });
                         }
                     });
 
+                    dpElement.on('dp.hide', function () {
+                        $timeout(function () {
+                            if (typeof $scope.onHide === 'function') {
+                                $scope.onHide();
+                              }
+                        });
+                    });
+
+
+                    dpElement.on('dp.show', function () {
+                        $timeout(function () {
+                            if (typeof $scope.onShow === 'function') {
+                                $scope.onShow();
+                              }
+                        });
+                    });
+
+                    dpElement.on('dp.error', function () {
+                        $timeout(function () {
+                            if (typeof $scope.onError === 'function') {
+                                $scope.onError();
+                              }
+                        });
+                    });
+
+                    dpElement.on('dp.update', function () {
+                        $timeout(function () {
+                            if (typeof $scope.onUpdate === 'function') {
+                                $scope.onUpdate();
+                              }
+                        });
+                    });
 
                     dpElement.on('click', function () {
                         $timeout(function () {
