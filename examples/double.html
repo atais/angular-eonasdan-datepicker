@@ -25,8 +25,13 @@
             <div class="col-md-3">
                 <div class="form-group">
                     <div class="input-group" datetimepicker
-                         on-change="vm.optionsTo.minDate = vm.dateFrom"
+                         on-change="vm.onChangeDatePickerFrom()"
+                         on-error="vm.onError()"
+                         on-show="vm.onShow()"
+                         on-hide="vm.onHide()"
+                         on-update="vm.onUpdate()"
                          ng-model="vm.dateFrom" options="vm.optionsFrom">
+                        <span class="input-group-addon">From</span>
                         <input class="form-control"/>
                         <span class="input-group-addon">
                             <span class="glyphicon glyphicon-calendar"></span>
@@ -34,14 +39,19 @@
                     </div>
                 </div>
                 <br>
-                <p><b>Input date:</b> {{vm.dateFrom.format() | date: 'yyyy/MM/dd'}}</p>
+                <p><b>Input date:</b> {{vm.dateFrom.format(vm.dateFormat)}}</p>
                 <p><b>Options:</b> {{vm.optionsFrom}}</p>
             </div>
             <div class="col-md-3">
                 <div class="form-group">
                     <div class="input-group" datetimepicker
-                         on-change="vm.optionsFrom.maxDate = vm.dateTo"
+                         on-change="vm.onChangeDatePickerTo()"
+                         on-error="vm.onError()"
+                         on-show="vm.onShow()"
+                         on-hide="vm.onHide()"
+                         on-update="vm.onUpdate()"
                          ng-model="vm.dateTo" options="vm.optionsTo">
+                        <span class="input-group-addon">To</span>
                         <input class="form-control"/>
                         <span class="input-group-addon">
                             <span class="glyphicon glyphicon-calendar"></span>
@@ -49,7 +59,7 @@
                     </div>
                 </div>
                 <br>
-                <p><b>Input date:</b> {{vm.dateTo.format() | date: 'yyyy/MM/dd'}}</p>
+                <p><b>Input date:</b> {{vm.dateTo.format(vm.dateFormat)}}</p>
                 <p><b>Options:</b> {{vm.optionsTo}}</p>
             </div>
         </div>

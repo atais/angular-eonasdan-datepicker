@@ -26,7 +26,14 @@
                 <label>Input element:</label>
                 <div class="form-group">
                     <div class="input-group">
-                        <input class="form-control" datetimepicker ng-model="vm.date" options="vm.options"/>
+                        <input class="form-control" datetimepicker
+                        ng-model="vm.date" options="vm.options"
+                        on-change="vm.onChange()"
+                        on-error="vm.onError()"
+                        on-show="vm.onShow()"
+                        on-hide="vm.onHide()"
+                        on-update="vm.onUpdate()"
+                        />
                         <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
                     </div>
                 </div>
@@ -35,7 +42,13 @@
             <div class="col-md-3">
                 <label>Input-group div element:</label>
                 <div class="form-group">
-                    <div class="input-group" datetimepicker ng-model="vm.date" options="vm.options">
+                    <div class="input-group" datetimepicker ng-model="vm.date" options="vm.options"
+                    on-change="vm.onChange()"
+                    on-error="vm.onError()"
+                    on-show="vm.onShow()"
+                    on-hide="vm.onHide()"
+                    on-update="vm.onUpdate()"
+                    >
                         <input class="form-control"/>
                         <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
                     </div>
