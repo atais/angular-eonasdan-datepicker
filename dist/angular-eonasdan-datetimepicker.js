@@ -43,7 +43,12 @@
                     };
 
                     var isDateEqual = function (d1, d2) {
-                        return moment.isMoment(d1) && moment.isMoment(d2) && d1.valueOf() === d2.valueOf();
+                      if(moment.isMoment(d1) && moment.isMoment(d2)){
+                        if(d1.isValid() && d2.isValid()){
+                          return (d1.valueOf() === d2.valueOf());
+                        }
+                      }
+                      return true; // return true for invald scenarios to prevent possible infinite digest loop
                     };
 
                     dpElement.on('dp.change', function (e) {
