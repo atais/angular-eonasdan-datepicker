@@ -13,4 +13,6 @@ install:
   - sudo apt-get update -q
   - sudo apt-get install -q google-chrome-stable
 
-script: npm test
+script: 
+  - npm install -g npm
+  - npm test
