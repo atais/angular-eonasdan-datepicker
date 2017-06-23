@@ -23,9 +23,7 @@
   "scripts": {
     "pretest": "npm install",
     "test": "(npm start > /dev/null &) && (gulp protractor)",
-
     "start": "http-server -a localhost -p 8000 -c-1 ./",
-
     "dev": "(npm start > /dev/null &) && (gulp dev)"
   },
   "peerDependencies": {
@@ -52,6 +50,7 @@
     "bootstrap": "^3.3.7",
     "eonasdan-bootstrap-datetimepicker": "^4.17.46",
     "jquery": "^2.2.4",
-    "moment": "^2.17.1"
+    "moment": "^2.17.1",
+    "protractor": "^5.1.2"
   }
 }
