@@ -92,6 +92,30 @@ Detailed description of event: http://eonasdan.github.io/bootstrap-datetimepicke
 You can pass a function that will be called every time the datetimepicker is clicked. <br>
 The event occurs when you open or close the datetimepicker.
 
+### on-error
+
+Function to be called when dp.error for the datepicker would occur
+
+Detailed description of event: http://eonasdan.github.io/bootstrap-datetimepicker/Events/#dperror
+
+### on-show
+
+Function to be called when dp.show for the datepicker would occur
+
+Detailed description of event: http://eonasdan.github.io/bootstrap-datetimepicker/Events/#dpshow
+
+### on-hide
+
+Function to be called when dp.hide for the datepicker would occur
+
+Detailed description of event: http://eonasdan.github.io/bootstrap-datetimepicker/Events/#dphide
+
+### on-update
+
+Function to be called when dp.update for the datepicker would occur
+
+Detailed description of event: http://eonasdan.github.io/bootstrap-datetimepicker/Events/#dpupdate
+
 ## Special thanks
 
 * [Rodrigo Saling](https://github.com/rodrigosaling) for help on making custom validators work
