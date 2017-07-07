@@ -47,6 +47,8 @@
                         if(d1.isValid() && d2.isValid()){
                           return (d1.valueOf() === d2.valueOf());
                         }
+                      } else if ((!d1 && d2 && (d1 === d1)) || (d1 && !d2 && (d2 === d2))){
+                        return false; // the d1 === d1 is to avoid NaN which is passed in iniitilization
                       }
                       return true; // return true for invald scenarios to prevent possible infinite digest loop
                     };

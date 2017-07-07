@@ -52,7 +52,7 @@ describe('single datetimepicker test page', function () {
         element(by.buttonText('Clear the time')).click();
         // restore
         var opener = 'input-group-addon';
-        element.all(by.className(opener)).get(0).click().click();
+        element.all(by.className(opener)).get(0).click();
         testFields(moment());
     });
 
@@ -60,7 +60,7 @@ describe('single datetimepicker test page', function () {
         element(by.buttonText('Clear the time')).click();
         // restore
         var opener = 'input-group-addon';
-        element.all(by.className(opener)).get(1).click().click();
+        element.all(by.className(opener)).get(1).click();
         testFields(moment());
     });
 

@@ -5,8 +5,8 @@
         .controller('controller', ['$timeout', function ($timeout) {
             var vm = this;
             vm.dateFormat = 'YYYY-MM-DD';
-            vm.dateFrom = moment();
-            vm.dateTo = moment().add(2,'days');
+            vm.dateFrom = moment.utc('2015-11-18T00:00Z');
+            vm.dateTo = moment.utc('2015-11-20T00:00Z');
 
             vm.optionsFrom = {
                 format:  vm.dateFormat,

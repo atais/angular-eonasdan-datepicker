@@ -2,12 +2,12 @@ var moment = require('moment');
 
 describe('double datetimepicker test page', function () {
 
-    var opener = 'input-group-addon';
+    var opener = 'glyphicon-calendar';
 
-    var date18 = moment('2015-11-18T00:00Z'); // 2015-11-18
-    var date20 = moment('2015-11-20T00:00Z'); // 2015-11-20
+    var date18 = moment.utc('2015-11-18T00:00Z'); // 2015-11-18
+    var date20 = moment.utc('2015-11-20T00:00Z'); // 2015-11-20
 
-    var date17 = date18.clone().add(-1, 'd'); // 2015-11-17
+    var date17 = date18.clone().subtract(1, 'd'); // 2015-11-17
     var date19 = date18.clone().add(1, 'd'); // 2015-11-19
     var date21 = date20.clone().add(1, 'd'); // 2015-11-21
 

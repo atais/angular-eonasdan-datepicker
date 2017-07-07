@@ -6,10 +6,10 @@
             var vm = this;
 
             $timeout(function() { // simulating a REST API Call that takes 500 ms
-                vm.date = moment().format('YYYY-MM-DD HH:mm');
+                vm.date = moment('2015-11-20T22:10Z');
             }, 500);
 
-            vm.options = {format: 'YYYY-MM-DD HH:mm', showClear: true};
+            vm.options = {format: 'YYYY/MM/DD HH:mm', showClear: true};
 
             vm.onChange = function() {
               console.log("onChange");
@@ -40,7 +40,7 @@
             };
 
             vm.clearTime = function () {
-                vm.date = undefined;
+                vm.date = "";
             };
         }]);
 })();
