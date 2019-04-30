@@ -31,6 +31,6 @@
     "bootstrap": "*",
     "eonasdan-bootstrap-datetimepicker": "~4",
     "moment": "*",
-    "jquery": "~2"
+    "jquery": "^3.4.0"
   }
 }
