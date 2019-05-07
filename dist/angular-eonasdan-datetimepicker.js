@@ -19,8 +19,8 @@
 
                     $scope.$watch('options', function (newValue) {
                         var dtp = dpElement.data('DateTimePicker');
-                        $.map(newValue, function (value, key) {
-                            dtp[key](value);
+                        Object.keys(newValue).forEach(function (key) {
+                            dtp[key](newValue[key]);
                         });
                     }, true);
 

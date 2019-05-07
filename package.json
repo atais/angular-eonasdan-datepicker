@@ -22,37 +22,37 @@
   "homepage": "https://github.com/atais/angular-eonasdan-datetimepicker",
   "scripts": {
     "pretest": "npm install",
-    "test": "concurrently -k -s first 'npm start' 'gulp protractor'",
+    "test": "concurrently -k -s first \"npm start\" \"gulp protractor\"",
     "start": "http-server -a localhost -p 8000 -c-1 ./",
-    "dev": "concurrently -k 'npm start' 'gulp dev'"
+    "dev": "concurrently -k \"npm start\" \"gulp dev\""
   },
   "peerDependencies": {
     "angular": "*",
     "bootstrap": "*",
     "eonasdan-bootstrap-datetimepicker": "~4",
     "moment": "*",
-    "jquery": "~2"
+    "jquery": "^3.4.0"
   },
   "devDependencies": {
     "concurrently": "^3.5.0",
     "gulp": "3.9.1",
-    "gulp-angular-protractor": "1.0.0",
+    "gulp-angular-protractor": "^2.0.0",
     "gulp-debug": "^2.1.2",
     "gulp-jshint": "^2.0.0",
     "gulp-ng-annotate": "^1.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^1.5.1",
-    "http-server": "^0.9.0",
+    "http-server": "^0.11.1",
     "jasmine-reporters": "2.2.0",
     "jshint": "^2.9.1",
-    "protractor": "4.0.11",
-    "webdriver-manager": "10.2.8"
+    "protractor": "^5.4.2",
+    "webdriver-manager": "^12.1.4"
   },
   "dependencies": {
     "angular": "^1.6.1",
     "bootstrap": "^3.3.7",
     "eonasdan-bootstrap-datetimepicker": "^4.17.46",
-    "jquery": "^2.2.4",
+    "jquery": "^3.4.0",
     "moment": "^2.17.1"
   }
 }
